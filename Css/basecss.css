@@ -1,0 +1,243 @@
+body{
+	font: 14px/18px Helvetica,Arial,'DejaVu Sans','Liberation Sans',Freesans,sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+}
+img {
+    border: 0;
+    max-width: 100%;
+    webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
+}
+:root {
+    --main-color: #d92b34;
+    --primary-color: #EE4D2D;
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+	--price-color: #d71921;
+    --border-color: #dbdbdb;
+    --star-gold-color: #FF9727;
+	--header-height: 150px;
+    --navbar-height: 34px;
+    --header-with-menu-height: 32px;
+    --header-with-search-height: calc(var(--header-height) - (var(--navbar-height) + var(--header-with-menu-height))); 
+}
+*{
+	box-sizing: inherit;
+}
+html{
+	font-size:62.5%;
+	line-height: 1.6rem;
+	box-sizing: border-box;
+}
+/* CSS dùng để căn giữa phần header*/
+.grid{
+	width: 1200px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+.grid__full-width{
+	width:100%;
+}
+.grid__row{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -12px;
+	margin-right: -12px;
+}
+/*reposive*/
+.grid__column-2{
+	padding-left: 12px;
+	padding-right: 12px;
+	width: 16.6667%;
+}
+.grid__column-2-4{
+/*
+	padding-left: 12px;
+	padding-right: 12px;
+*/
+	width: 25%;
+	margin-bottom: 30px;
+}
+.grid__column-2-4-1{
+	padding-left: 12px;
+	padding-right: 12px;
+	width: 25%;
+}
+.grid__column-10{
+	padding-left: 12px;
+	padding-right: 12px;
+	width: 83.3334%;
+}
+.grid__column-5{
+	padding-left: 12px;
+	padding-right: 12px;
+	width: 41.6667%;
+}
+.grid__column-6{
+	padding-left: 12px;
+	padding-right: 12px;
+	width: 50%;
+}
+.grid__column-12{
+/*
+	padding-left: 12px;
+	padding-right: 12px;
+*/
+	width: 100%;
+}
+@keyframes fadeIn{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+@keyframes growth{
+	from{
+		transform: scale(var(--growth-from));
+	}
+	to{
+		
+	
+		transform: scale(var(--growth-to));
+	}
+}
+/*button style*/
+.btn{
+	min-width:124px;
+	height:40px;
+	text-decoration: none;
+	border: none;
+	border-radius: 2px;
+	font-size: 1.4rem;
+	padding: 0;
+	cursor: pointer;
+}
+/*chỉnh màu hover*/
+.btn:hover{
+	background-color: rgba(0,0,0,0.5);
+	color: d4020d;
+	text-decoration: none;
+}
+.btn.btn--primary{
+	color:white;
+	background-color: var(--main-color);
+}
+/*selection*/
+.select-input{
+	position: relative;
+	min-width:200px;
+	height: 40px;
+	font-size: 1.4rem;
+	padding: 0 12px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: white;
+}
+.select-input__icon{
+	color: rgb(131,131,131);
+	cursor: pointer;
+}
+.select-input__list{
+	left: 0;
+	right: 0;
+	position: absolute;
+	list-style: none;
+	background-color: white;
+	top: 41px;
+	padding:4px 12px;
+	display: none;
+	z-index: 1;
+}
+.select-input:hover .select-input__list{
+	display: block;
+}
+.select-input__list-link a{
+	text-decoration: none;
+	color: var(--text-color);
+	display: block;
+	padding: 4px 0;
+}
+.select-input__list-link a:hover{
+	color: var(--primary-color);
+}
+.pagination {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.pagination-item{
+	margin: 0 16px;
+}
+.pagination-item--active .pagination-item__link{
+	background-color: var(--primary-color);
+	color: white;
+	text-decoration: none;
+}
+..pagination-item--active .pagination-item__link:hover{
+	background-color: #ed5c3f;
+}
+.pagination-item__link{
+	--height: 30px;
+	display: block;
+	text-decoration: none;
+	font-size: 2rem;
+	font-weight: 300;
+	color: #939393;
+	min-width: 40px;
+	height: var(--height);
+	line-height: var(--height);
+	text-align: center;
+	border-radius: 2px;
+}
+.pagination-item__no-link{
+	cursor: default;
+}
+.pagination1 {
+	list-style: none;
+	justify-content: center;
+	align-items: center;
+}
+.pagination1-item{
+	margin: 0 16px;
+}
+.pagination1-item--active .pagination1-item__link{
+	background-color: var(--primary-color);
+	color: white;
+}
+.pagination1-item--active .pagination1-item__link:hover{
+	background-color: #ed5c3f;
+}
+.pagination1-item__link{
+	--height: 30px;
+	margin-left: 44px;
+	float: left;
+	display: block;
+	text-decoration: none;
+	font-size: 2rem;
+	font-weight: 300;
+	color: #939393;
+	min-width: 40px;
+	height: var(--height);
+	line-height: var(--height);
+	text-align: center;
+	border-radius: 2px;
+}
+.pagination1-item__no-link{
+	cursor: default;
+}
